@@ -1,1 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(245, 245, 245); /* Color de fondo suave */
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(imagenes/fondoprincipal.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 80px 0 0 0;
+    margin-bottom: 25px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 150px; 
+    height: auto; 
+}
+
+.menu .navbar ul li {
+    position: relative; 
+    float: left; 
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 30px; 
+    color: rgb(46, 138, 219);
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: rgb(115, 201, 201);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px; 
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-txt {
+    width: 50%;
+    padding-right: 75px;
+}
+
+.header-txt h1 {
+    color: aliceblue; 
+    font-size: 45px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+span {
+    color: rgb(66, 122, 122);
+}
+
+p {
+    font-size: 17px;
+    color: rgb(181, 179, 140);
+    margin-bottom: 35px; 
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 35px;
+    background-color: rgb(115, 201, 201);
+    color: rgb(42, 95, 160);
+}
+
+/* Estilos para la sección About */
+.about {
+    padding: 150px 20px; /* Aumenté el padding vertical */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    border: 1px solid #ccc; /* Borde alrededor de la sección */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-img {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.about-img img {
+    width: 270px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-txt {
+    text-align: center;
+    flex: 1;
+    margin: 0 20px; 
+}
+
+.about-txt h2 {
+    font-size: 40px;
+    line-height: 1;
+    color: #34929e; 
+    margin-bottom: 25px;
+}
+
+.about-txt p {
+    color: rgb(199, 197, 158);
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-img {
+        justify-content: center;
+    }
+    
+    .about-img img {
+        margin: 10px;
+    }
+}

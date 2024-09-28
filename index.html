@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Matrícula</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Vinculación del archivo CSS para estilos -->
 </head>
 <body>
     <!-- Creación del menú -->
     <header class="header">
         <div class="menu container">
-            <a href="#" class="logo">logo</a>
+            <a href="#" class="logo">
+                <img src="imagenes/logoups.webp" alt="Logo UPS" class="logo-img">
+            </a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
-                <img src="imagenes/menu.jpeg" class="menu-icono" alt="">
+                <img src="imagenes/menu.jpeg" class="menu-icono" alt=""> <!-- Icono del menú -->
             </label>
             <!-- Encabezado/barra navegación -->
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Agregar Curso</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Inicio</a></li> <!-- Enlace a la página de inicio -->
+                    <li><a href="#">Agregar Curso</a></li> <!-- Enlace para agregar un curso -->
+                    <li><a href="#">Contacto</a></li> <!-- Enlace a la sección de contacto -->
                 </ul>
             </nav>
         </div>
         <div class="header-content container">
             <div class="header-txt">
-                <h1>¡Gestiona tu <span>matrícula</span> de manera fácil y rápida!</h1>
+                <h1>¡Gestiona tu <span>matrícula</span> de manera fácil y rápida!</h1> <!-- Título principal -->
                 <p>
                     Aquí puedes agregar tus cursos para el próximo semestre. Te ofrecemos una <strong>amplia selección</strong> de programas educativos. 
                     Gestiona tu <strong>progreso académico</strong> con nosotros y accede a una educación de calidad. Todo <em>a un clic de distancia</em>.
                 </p>
-                <a href="#" class="btn-1">Empezar</a>      
+                <a href="#" class="btn-1">Empezar</a> <!-- Botón para comenzar -->
             </div>
         </div>
     </header>
 
+    <!-- Sección "Acerca de" que presenta la experiencia de la empresa -->
     <section class="about container">
         <div class="about-img">
-            <img src="imagenes/int1.png" alt="">
-            <img src="imagenes/int2.jpg" alt="">
+            <img src="imagenes/img1.png" alt=""> <!-- Imagen de la sección "Acerca de" -->
+            <img src="imagenes/int2.jpg" alt=""> <!-- Otra imagen de la sección "Acerca de" -->
         </div>
         <div class="about-txt">
-            <h2>Más de <span>12 años de experiencia</span> en el sector</h2>
+            <h2>Más de <span>12 años de experiencia</span> en el sector</h2> <!-- Título sobre la experiencia -->
             <p>
                 En [Nombre de la Empresa], nos enorgullecemos de contar con una sólida trayectoria en el desarrollo de soluciones tecnológicas innovadoras. 
                 Con más de 12 años de experiencia, hemos trabajado con empresas de diferentes industrias, ayudándolas a transformar sus procesos y potenciar 
@@ -52,10 +55,11 @@
                 Nuestro equipo de expertos está comprometido con brindar servicios de calidad, adaptados a las necesidades específicas de cada cliente, 
                 siempre manteniendo el foco en la excelencia y la innovación. ¡Estamos listos para acompañarte en tu camino hacia el éxito!
             </p>
-            <a href="#" class="btn-1">Información</a>
+            <a href="#" class="btn-1">Información</a> <!-- Botón para obtener más información -->
         </div>
     </section>
 
+    <!-- Sección que proporciona información sobre el proceso de matrícula -->
     <section class="information">
         <h2>Información sobre el Proceso de Matrícula</h2>
         <p>
@@ -65,47 +69,63 @@
                 <li>Confirma tu matrícula.</li>
             </ol>
         </p>
-        <a href="#" class="btn-1">Empezar tu Matrícula</a>
+        <a href="#" class="btn-1">Empezar tu Matrícula</a> <!-- Botón para iniciar el proceso de matrícula -->
     </section>
 
+    <!-- Sección principal para agregar nuevos cursos -->
     <main class="agregar-cursos container">
-        <h2>Agregar Nuevos Cursos</h2>
+        <h2>Agregar Nuevos Cursos</h2> <!-- Título de la sección de agregar cursos -->
         <form id="courseForm">
-            <input type="text" id="courseName" placeholder="Nombre del Curso" required>
-            <input type="text" id="instructorName" placeholder="Nombre del Instructor" required>
-            <input type="date" id="startDate" placeholder="Fecha de Inicio" required>
-            <input type="text" id="duration" placeholder="Duración (ej. 4 semanas)" required>
-            <textarea id="description" placeholder="Descripción" required></textarea>
-            <input type="submit" value="Agregar Curso" class="btn-3">
+            <input type="text" id="courseName" placeholder="Nombre del Curso" required> <!-- Campo para el nombre del curso -->
+            <input type="text" id="instructorName" placeholder="Nombre del Instructor" required> <!-- Campo para el nombre del instructor -->
+            <input type="date" id="startDate" placeholder="Fecha de Inicio" required> <!-- Campo para la fecha de inicio -->
+            <input type="text" id="duration" placeholder="Duración (ej. 4 semanas)" required> <!-- Campo para la duración del curso -->
+            <textarea id="description" placeholder="Descripción" required></textarea> <!-- Área de texto para la descripción del curso -->
+            <input type="submit" value="Agregar Curso" class="btn-3"> <!-- Botón para agregar el curso -->
         </form>
-        <h3>Lista de Cursos</h3>
-        <ul id="courseList"></ul>
+        <h3>Lista de Cursos</h3> <!-- Título para la lista de cursos -->
+        <ul id="courseList"></ul> <!-- Lista donde se mostrarán los cursos agregados -->
     </main>
 
+    <!-- Sección adicional que destaca la calidad de los cursos ofrecidos -->
     <section class="information">
         <h2>Tenemos los <span>mejores cursos</span></h2>
         <p>
-            TEXTO RELLENO Xxd
+            TEXTO RELLENO Xxd <!-- Texto de ejemplo, se puede reemplazar por información real -->
         </p>
         <div class="img-cont">
-            <img src="imagenes/seccion1.png" alt="">
-            <img src="imagenes/sec-2.png" alt="">
-            <img src="imagenes/sec-3.jpeg" alt="">
+            <img src="imagenes/seccion1.png" alt=""> <!-- Imagen de la sección de cursos -->
+            <img src="imagenes/sec-2.png" alt=""> <!-- Otra imagen de la sección de cursos -->
+            <img src="imagenes/sec-3.jpeg" alt=""> <!-- Tercera imagen de la sección de cursos -->
         </div>
     </section>
 
+    <!-- Sección de contacto para soporte a estudiantes -->
     <section class="contact container">
-        <h2>Soporte para Estudiantes</h2>
+        <h2>Soporte para Estudiantes</h2> <!-- Título de la sección de soporte -->
         <p>¿Tienes problemas con tu registro? ¿Dudas sobre los cursos? ¡Estamos aquí para ayudarte!</p>
         <form>
-            <input type="email" placeholder="Correo Electrónico">
-            <textarea placeholder="Escribe tu mensaje aquí"></textarea>
-            <input type="submit" value="Enviar" class="btn-3">
+            <input type="email" placeholder="Correo Electrónico"> <!-- Campo para el correo electrónico -->
+            <textarea placeholder="Escribe tu mensaje aquí"></textarea> <!-- Área de texto para el mensaje -->
+            <input type="submit" value="Enviar" class="btn-3"> <!-- Botón para enviar el mensaje -->
         </form> 
     </section>
-    <!-- links de pie de pagina-->
-<footer class="footer">
-    <div class="footer-content container">
+
+    <!-- Sección de pie de página con enlaces adicionales -->
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link ">
+                <h3>
+                    lorem 
+                </h3>
+                <ul>
+                    <li> <a href="#">lorem</a></li>
+                    <li> <a href="#">lorem</a></li>
+                    <li> <a href="#">lorem</a></li>
+                    <li> <a href="#">lorem</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="link ">
             <h3>
                 lorem 
@@ -115,7 +135,6 @@
                 <li> <a href="#">lorem</a></li>
                 <li> <a href="#">lorem</a></li>
                 <li> <a href="#">lorem</a></li>
-
             </ul>
         </div>
     </div>
@@ -128,25 +147,12 @@
             <li> <a href="#">lorem</a></li>
             <li> <a href="#">lorem</a></li>
             <li> <a href="#">lorem</a></li>
-            
         </ul>
     </div>
-</div>
-<div class="link ">
-    <h3>
-        lorem 
-    </h3>
-    <ul>
-        <li> <a href="#">lorem</a></li>
-        <li> <a href="#">lorem</a></li>
-        <li> <a href="#">lorem</a></li>
-        <li> <a href="#">lorem</a></li>
-        
-    </ul>
-</div>
-</div>
-</footer>
+    </div>
+    </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js"></script> <!-- Vinculación del archivo JavaScript para funcionalidad -->
 </body>
 </html>
+
