@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +22,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="#home">Inicio</a></li>
+                    <li><a href="#courseListSection">Cursos</a></li>
                     <li><a href="#addCourseSection">Agregar Curso</a></li>
                     <li><a href="#contactSection">Contacto</a></li>
                 </ul>
@@ -29,12 +30,12 @@
         </div>
         <div class="header-content container">
             <div class="header-txt">
-                <h1>¡Gestiona tu <span>matrícula</span> de manera fácil y rápida!</h1> <!-- Título principal -->
+                <h1>¡Gestiona tu <span>matrícula</span> de forma ágil y sencilla!</h1> <!-- Título principal -->
                 <p>
-                    Aquí puedes agregar tus cursos para el próximo semestre. Te ofrecemos una <strong>amplia selección</strong> de programas educativos. 
-                    Gestiona tu <strong>progreso académico</strong> con nosotros y accede a una educación de calidad. Todo <em>a un clic de distancia</em>.
+                    Inscríbete en tus cursos para el próximo semestre. Te ofrecemos una <strong>amplia variedad</strong> de programas educativos. 
+                    Monitorea tu <strong>progreso académico</strong> con nosotros y accede a una educación de calidad. Todo <em>a solo un clic</em>.
                 </p>
-                <a href="#addCourseSection" class="btn-1">Empezar</a> <!-- Botón para comenzar -->
+                <a href="#addCourseSection" class="btn-1">Comienza Ahora</a> <!-- Botón para comenzar -->
             </div>
         </div>
     </header>
@@ -46,31 +47,27 @@
             <img src="imagenes/int2.jpg" alt=""> <!-- Otra imagen de la sección "Acerca de" -->
         </div>
         <div class="about-txt">
-            <h2>Más de <span>12 años de experiencia</span> en el sector</h2> <!-- Título sobre la experiencia -->
+            <h2>Más de <span>12 años de experiencia</span> en la educación</h2> <!-- Título sobre la experiencia -->
             <p>
-                En [Nombre de la Empresa], nos enorgullecemos de contar con una sólida trayectoria en el desarrollo de soluciones tecnológicas innovadoras. 
-                Con más de 12 años de experiencia, hemos trabajado con empresas de diferentes industrias, ayudándolas a transformar sus procesos y potenciar 
-                sus resultados mediante el uso de herramientas digitales de vanguardia.
+                En EduPlus, nos enorgullece tener una trayectoria sólida en el desarrollo de soluciones tecnológicas innovadoras. 
+                Con más de 12 años de experiencia, hemos colaborado con diversas industrias, transformando procesos y mejorando resultados a través de herramientas digitales avanzadas.
             </p>
-            <a href="#informationSection" class="btn-1">Información</a> <!-- Botón para obtener más información -->
+            <a href="#informationSection" class="btn-1">Más Información</a> <!-- Botón para obtener más información -->
         </div>
     </section>
 
     <!-- Sección de Información -->
     <section class="information" id="informationSection">
-        <h2>Información sobre el Proceso de Matrícula</h2>
+        <h2>Proceso de Matrícula Simplificado</h2>
         <p>
-            El proceso de matrícula está diseñado para que puedas inscribirte en los cursos de manera rápida y sencilla. Sigue estos pasos:
-            <ol>
-                <li>Selecciona los cursos que desees agregar a tu plan académico.</li>
-            </ol>
+            Nuestro proceso de matrícula está diseñado para que te inscribas en los cursos de manera rápida y sin complicaciones. Sigue estos sencillos pasos:
         </p>
-        <a href="#addCourseSection" class="btn-1">Empezar tu Matrícula</a> <!-- Botón para iniciar el proceso de matrícula -->
+        <a href="#addCourseSection" class="btn-1">Iniciar Matrícula</a> <!-- Botón para iniciar el proceso de matrícula -->
     </section>
 
     <!-- Sección para agregar nuevos cursos -->
     <main class="agregar-cursos container" id="addCourseSection">
-        <h2>Agregar Nuevos Cursos</h2>
+        <h2>Incorporar Nuevos Cursos</h2>
         <form id="courseForm">
             <input type="text" id="courseName" placeholder="Nombre del Curso" required>
             <input type="text" id="instructorName" placeholder="Nombre del Instructor" required>
@@ -81,18 +78,19 @@
         </form>
         
         <!-- Nueva sección para mostrar la lista de cursos -->
-        <section class="course-list-section">
-            <h3>Lista de Cursos</h3>
+        <section class="course-list-section" id="courseListSection">
+            <h3>Lista de Cursos Disponibles</h3>
             <ul id="courseList"></ul>
         </section>
     </main>
+
     <!-- Sección de contacto -->
     <section class="contact container" id="contactSection">
-        <h2>Soporte para Estudiantes</h2> <!-- Título de la sección de soporte -->
-        <p>¿Tienes problemas con tu registro? ¿Dudas sobre los cursos? ¡Estamos aquí para ayudarte!</p>
+        <h2>Asistencia al Estudiante</h2> <!-- Título de la sección de soporte -->
+        <p>¿Tienes dificultades con tu registro? ¿Preguntas sobre los cursos? ¡Estamos aquí para ayudarte!</p>
         <form>
-            <input type="email" placeholder="Correo Electrónico"> <!-- Campo para el correo electrónico -->
-            <textarea placeholder="Escribe tu mensaje aquí"></textarea> <!-- Área de texto para el mensaje -->
+            <input type="email" placeholder="Correo Electrónico" required> <!-- Campo para el correo electrónico -->
+            <textarea placeholder="Escribe tu mensaje aquí" required></textarea> <!-- Área de texto para el mensaje -->
             <input type="submit" value="Enviar" class="btn-3"> <!-- Botón para enviar el mensaje -->
         </form> 
     </section>
@@ -101,11 +99,13 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="link">
-                <h3>Redes Sociales</h3>
+                <h3>Conéctate con Nosotros</h3>
                 <a href="#">Facebook</a>
                 <a href="#">Twitter</a>
                 <a href="#">Instagram</a>
             </div>
         </div>
-        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <p>&copy; 2024 EduPlus. Todos los derechos reservados.</p>
     </footer>
+</body>
+</html>
