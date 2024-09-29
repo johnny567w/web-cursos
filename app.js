@@ -1,67 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
     const courseForm = document.getElementById("courseForm");
     const courseList = document.getElementById("courseList");
+    const contactForm = document.querySelector(".contact form");
 
-    // Cargar cursos desde localStorage
-    loadCourses();
+    // Función para agregar un curso a la lista
+    courseForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Evita que el formulario se envíe y recargue la página
 
-    // Manejar el envío del formulario
-    courseForm.addEventListener("submit", function (e) {
-        e.preventDefault(); // Evitar el envío del formulario
-
+        // Obtener valores de los campos del formulario
         const courseName = document.getElementById("courseName").value;
         const instructorName = document.getElementById("instructorName").value;
         const startDate = document.getElementById("startDate").value;
         const duration = document.getElementById("duration").value;
         const description = document.getElementById("description").value;
 
-        // Crear un nuevo curso
-        const course = {
-            courseName,
-            instructorName,
-            startDate,
-            duration,
-            description,
-        };
+        // Crear un nuevo elemento de lista
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<strong>${courseName}</strong> (Instructor: ${instructorName}, Inicio: ${startDate}, Duración: ${duration})<br>${description}`;
+        
+        // Agregar el nuevo curso a la lista
+        courseList.appendChild(listItem);
 
-        // Agregar el curso a localStorage
-        addCourseToLocalStorage(course);
-
-        // Mostrar el curso en la lista
-        displayCourse(course);
-
-        // Reiniciar el formulario
+        // Limpiar los campos del formulario
         courseForm.reset();
     });
 
-    // Función para cargar cursos desde localStorage
-    function loadCourses() {
-        const courses = JSON.parse(localStorage.getItem("courses")) || [];
-        courses.forEach(course => displayCourse(course));
-    }
+    // Función para enviar el formulario de contacto
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Evita que el formulario se envíe y recargue la página
 
-    // Función para agregar curso a localStorage
-    function addCourseToLocalStorage(course) {
-        const courses = JSON.parse(localStorage.getItem("courses")) || [];
-        courses.push(course);
-        localStorage.setItem("courses", JSON.stringify(courses));
-    }
+        // Obtener valores del formulario de contacto
+        const email = contactForm.querySelector("input[type='email']").value;
+        const message = contactForm.querySelector("textarea").value;
 
-    // Función para mostrar un curso en la lista
-    function displayCourse(course) {
-        const li = document.createElement("li");
-        li.innerHTML = `
-            <strong>${course.courseName}</strong><br>
-            Instructor: ${course.instructorName}<br>
-            Fecha de inicio: ${course.startDate}<br>
-            Duración: ${course.duration}<br>
-            <button onclick="showDetails('${course.courseName}')">Ver más detalles</button>
-        `;
-        courseList.appendChild(li);
-    }
+        // Aquí puedes agregar lógica para enviar el mensaje (por ejemplo, a un servidor)
+        console.log(`Correo: ${email}, Mensaje: ${message}`);
+
+        // Limpiar el formulario de contacto
+        contactForm.reset();
+    });
 });
-
-// Función para mostrar más detalles de un curso
-function showDetails(courseName) {
-    alert(`Mostrando más detalles para: ${courseName}`);
-}

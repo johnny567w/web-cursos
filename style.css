@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(245, 245, 245); /* Color de fondo suave */
+    background-color: rgb(245, 245, 245); 
 }
 
 img {
@@ -107,18 +107,20 @@ p {
     padding: 13px 35px;
     background-color: rgb(115, 201, 201);
     color: rgb(42, 95, 160);
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 /* Estilos para la sección About */
 .about {
-    padding: 150px 20px; /* Aumenté el padding vertical */
+    padding: 150px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
-    border: 1px solid #ccc; /* Borde alrededor de la sección */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-img {
@@ -150,6 +152,7 @@ p {
     color: rgb(199, 197, 158);
 }
 
+/* Responsive design for about section */
 @media (max-width: 768px) {
     .about {
         flex-direction: column;
@@ -162,5 +165,271 @@ p {
     
     .about-img img {
         margin: 10px;
+    }
+}
+
+/* Estilos para la sección de Información */
+.information {
+    padding: 70px 0;
+    background-image: url(imagenes/seccion1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.information-content {
+    flex-basis: 50%;
+}
+
+.information-1 {
+    display: flex;
+}
+
+.information-2 {
+    flex-basis: 50%;
+    padding-left: 50px;
+}
+
+.information-2 h2 {
+    color: #479ce1;
+}
+
+.information-3 {
+    flex-basis: 50%;
+}
+
+.img-cont {
+    width: 200px;
+}
+
+.img-cont img {
+    width: 200px;
+    margin-right: 15px;
+}
+
+/* Estilos para la sección de Contacto */
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+form {
+    margin-top: 50px;
+}
+
+input, textarea {
+    padding: 15px 25px;
+    border: 1px solid aqua;
+    border-radius: 25px;
+    margin-right: 25px;
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    width: calc(100% - 50px); /* Asegura que los campos de entrada se ajusten dentro del formulario */
+}
+
+textarea {
+    height: 150px; 
+    resize: none;
+}
+
+.btn-3 {
+    background-color: #34929e;
+    color: antiquewhite;
+    cursor: pointer;
+    padding: 15px 35px;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+}
+
+/* Estilos para la sección de Agregar Cursos */
+#add-course {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#add-course form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#add-course input, #add-course textarea {
+    width: calc(100% - 50px); /* Ajusta el ancho del input y textarea */
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#add-course button {
+    padding: 15px 35px;
+    background-color: #34929e;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#add-course button:hover {
+    background-color: #287f86;
+}
+
+/* Estilos para el Pie de página */
+.footer {
+    background-color: rgba(21, 7, 81, 0.33);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3 {
+    color: #d7cbcb;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.link a {
+    font-size: 15px;
+    color: #d7cbcb;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.link a:hover {
+    color: #479ce1;
+}
+
+.course-list-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Fondo claro para la sección */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.course-list-section h3 {
+    margin-bottom: 10px;
+    color: #333; /* Color del título */
+}
+
+.course-list-section ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+}
+
+.course-list-section li {
+    background-color: #fff; /* Fondo blanco para cada curso */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Borde del curso */
+    border-radius: 3px; /* Bordes redondeados */
+}
+
+.course-list-section button {
+    background-color: #008080; /* Color del botón */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 5px 10px;
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.course-list-section button:hover {
+    background-color: #005757; /* Color del botón al pasar el ratón */
+}
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #479ce1;
+        display: none;
+    }
+    .menu .navbar ul li a:hover {
+        color: #479ce1;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar{
+        display: initial;
+
+    }
+    .header{
+        background-position: left;
+        min-height: 0vh;
+        padding: 100px 30px;
+    }
+    .header-txt{
+        width: 100;
+        text-align: center;
+        padding: 0;
+    }
+
+    .about{
+        padding: 30px;
+        flex-direction: column;
+    }
+    .about-img{
+        justify-content: center;
+        order: 2;
+    }
+    .about-img img{
+        width: 150px;
+        margin: 0 15px;
+    }
+    .about-txt{
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .about-txt p {
+        margin-bottom: 15px;
+    }
+    .img-cont
+    {
+        justify-content: center;
+    }
+    .img-cont img{
+        width: 80px;
+    }
+    .contact{
+        padding: 30px;
+    }
+    form{
+        margin-top: 30px;
+    }
+    input{
+        margin: 0 10px 10px 0;
+    }
+    .footer{
+        padding: 30px;
+    }
+    .footer-content{
+flex-direction: column;
+text-align: center;
     }
 }
